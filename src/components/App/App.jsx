@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import Dashboard from "../Dashboard/Dashboard";
+import Header from "../Header/Header";
 import Reviews from "../Reviews/Reviews";
 import Review from "../Review/Review";
 import AboutMe from "../AboutMe/AboutMe";
@@ -10,7 +11,7 @@ import MyStory from "../AboutMe/MyStory";
 import AboutUs from "../AboutUs/AboutUs";
 import SiteHistory from "../AboutUs/SiteHistory";
 import SiteMission from "../AboutUs/SiteMission";
-import Header from "../Header/Header";
+import PageNotFound from "../PageNotFound/PageNotFound";
 import "./App.css";
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           <Route path="site-history" element={<SiteHistory />} />
           <Route path="site-mission" element={<SiteMission />} />
         </Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Routes>
     </div>
   );
